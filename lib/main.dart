@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 
 void main() {
+//MaterialApp
   runApp(MaterialApp(
-    home: HomePage(),
-    theme: ThemeData(
-      primarySwatch: Colors.purple,
-    ),
+    home: const Homepage(),
+    theme: ThemeData(primarySwatch: Colors.green),
   ));
 }
 
-// ignore: use_key_in_widget_constructors
-class HomePage extends StatelessWidget {
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Awsome App Flutter new"),
-        ),
+        appBar: AppBar(title: const Text("Welcome to Flutter App")),
         body: Container(
-          child: Text("Welcome to flutter"),
+          child: Text("Now we are even"),
         ));
   }
 }
