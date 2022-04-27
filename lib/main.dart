@@ -14,34 +14,39 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Welcome to Flutter App")),
-        body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            alignment: Alignment.center,
-            height: 100,
-            width: 100,
-            decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(20),
-                gradient:
-                    LinearGradient(colors: [Colors.pinkAccent, Colors.yellow]),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                  )
-                ]),
-            child: const Text(
-              "Learn as fast as i can",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+      appBar: AppBar(title: const Text("Welcome to Flutter App")),
+      body: Container(
+        color: Colors.blueGrey,
+        height: 500,
+        width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              height: 50,
+              width: 50,
+              color: Colors.red,
             ),
-          ),
-        ));
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              height: 50,
+              width: 50,
+              color: Colors.green,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              height: 50,
+              width: 50,
+              color: Colors.yellow,
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
